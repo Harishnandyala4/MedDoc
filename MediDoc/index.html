@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<title>MedDoc</title>
+	
+  <meta charset="utf-8">
+	<link href="medDoc.css" rel="stylesheet">
+	
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+  <script type = "text/javascript" src = "http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+  </script>
+
+  <script>
+  function myFunction() {
+    var medicinename = document.forms[0];
+    var txt = "";
+    var i;
+    for (i = 0; i < medicinename.length; i++) {
+        if (medicinename[i].checked) {
+            txt = txt + medicinename[i+1].value + " ";
+        }
+    }
+    document.getElementById("med").value = "The products you ordered are : " + txt;
+  }
+
+
+  jQuery(document).ready(function($) {
+    var sum = 0;
+    $('#container :checkbox').click(function() {
+        sum = 0;
+        $('#container :checkbox:checked').each(function(idx, elm) {
+            sum += parseInt(elm.value, 10);
+        });
+        
+             document.getElementById("total").value = "Your total is $"  + sum ;
+
+    
+    });
+  });
+  </script>
+
+</head>
+
+<body id = "indexbg">
+
+  <div class="transparentbox">
+    <p>
+      <a href="index.html"><img src="meddoc.jpg"></a>
+ 		</p>
+ 		<p id="headerlinks"> Harish Sai Krishna
+    </p>
+	</div>
+
+  
+
+    <form action="cart.html" method="post">
+
+<div id="container" >
+
+
+
+ <dt><strong>
+          <input type="checkbox" name="medicine" value="5.00">
+          <input type="hidden" id="medicinename" value="Hydrochlorothiazide"/>
+          &nbsp;Hydrochlorothiazide(High BP) &emsp;&nbsp;&emsp;&nbsp; $5.00</p>
+        </strong></dt>
+        <dd> Hydrochlorothiazide is a common diuretic antihypertensive drug of the thiazide family. Its poor aqueous solubility is one of the reasons for its limited bioavailability after oral administration.
+        </dd><br>
+      </dl>
+
+        <dt><strong>
+          <input type="checkbox" name="medicine" value="2.00">
+          <input type="hidden" id="medicinename" value="Paracetamol"/>
+          &nbsp;Paracetamol(Fever) &emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&nbsp; $2.00
+        </strong></dt>
+        <dd> Paracetamol is a common ingredient in many medicines. It is prescribed for mild to moderate pain, inflammation and fever. ! "Panamax" Single Strip of tablets 
+        </dd><br>
+
+        <dt><strong>
+          <input type="checkbox" name="medicine" value="3.00">
+          <input type="hidden" id="medicinename" value="Benzonatate"/>
+          &nbsp;Benzonatate(Cough & Cold) &nbsp;&emsp;&emsp;&emsp;&nbsp; $3.00
+        </strong></dt>
+        <dd> Benzonatate is a non-narcotic cough suppressant, prescribed for cough. It works by depressing the "cough center" in the brain. ! "Benz" Single Strip of tablets 
+        </dd><br>
+
+        <dt><strong>
+          <input type="checkbox" name="medicine" value="3.00">
+          <input type="hidden" id="medicinename" value="Aztreonam"/>
+          &nbsp;Aztreonam(Abdominal Pain) &emsp;&emsp;&emsp;&nbsp; $3.00
+        </strong></dt>
+        <dd> Aztreonam is monobactam antibiotic, prescribed for serious infections caused by susceptible gram negative bacteria like urinary tract infection, lower respiratory tract infection. it works by killing sensitive bacteria that cause infection. "Azactam(1000mg)" Single Strip of tablets 
+        </dd><br>
+
+        <dt><strong>
+          <input type="checkbox" name="medicine" value="6.00">
+          <input type="hidden" id="medicinename" value="Diphenhydramine"/>&nbsp;Diphenhydramine(Vomiting) &emsp;&emsp;&emsp;&nbsp; $6.00
+        </strong></dt>
+        <dd> Diphenhydramine is an antihistamine used to relieve. It is used to prevent and treat nausea, vomiting and dizziness caused by motion sickness. Benadryl box of tablets 
+        </dd><br>
+        
+        <dt><strong>
+          <input type="checkbox" name="medicine" value="2.00">
+           <input type="hidden" id="medicinename" value="Aspirin"/>
+          &nbsp;Aspirin(Pain and Fever) &nbsp;&emsp;&emsp; &emsp;&emsp;&emsp;&nbsp; $2.00</p>
+        </strong></dt>
+        <dd> Aspirin is an analgesic and antipyretic, prescribed for pain, heart attack and fever. The drug decreases the substances that cause pain and inflammation. ! "Antiban-ASP(150mg)" Single Strip of tablets
+        </dd><br>
+
+        <dt><strong>
+          <input type="checkbox" name="medicine" value="1.00">
+          <input type="hidden" id="medicinename" value="Bisacodyl"/>
+          &nbsp;Bisacodyl(Constipation) &emsp;&emsp; &emsp;&emsp;&emsp;&nbsp; $1.00</p>
+        </strong></dt>
+        <dd> Bisacodyl is a stimulant laxative, prescribed for constipation ! "Baxative" Single Strip of tablets
+        </dd><br>
+
+        <dt><strong>
+          <input type="checkbox" name="medicine" value="6.00">
+          <input type="hidden" id="medicinename" value="Ibuprofen"/>
+          &nbsp;Ibuprofen(Headache, Migraine) &emsp;&emsp;&nbsp; $6.00</p>
+        </strong></dt>
+        <dd> Ibuprofen is produced industrially as a racemate. The compound, like other 2-arylpropionate derivatives (including ketoprofen, flurbiprofen, naproxen, etc.), does contain a chiral center in the α-position of the propionate moiety. 
+        </dd><br>
+
+
+
+      <div id='sum'></div>
+
+    
+</div>
+
+    <div id="addtocart">
+    <input type="button" onclick="myFunction()" value="Add to Cart">
+     <i class="fa fa-cart-plus" style="font-size:48px;color:red"></i>
+    <br><br>
+    </div>
+
+    <div id="xy">
+    <textarea id="med" rows="4" cols="50" ></textarea>
+    <br>
+
+    <input type="text" id="total" required><br><br>
+
+    <input type="submit" value="Check Out" formaction="cart.html">
+    </div>
+     </form>
+
+
+  
+ 
+</body>
+</html>
